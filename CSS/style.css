@@ -2,7 +2,7 @@
         display:grid;
         grid-template-columns: 150px 1fr;
     }
-    ol{
+    #grid ol{
         padding-left: 50px;
     }
     #article{
@@ -35,7 +35,7 @@
         #grid{
             display: block;
         }
-        #grid ol{
+        ol{
             border-right: none;
         }
         h1{
