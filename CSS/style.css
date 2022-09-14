@@ -2,7 +2,7 @@
         display:grid;
         grid-template-columns: 150px 1fr;
     }
-    #grid ol{
+    ol{
         padding-left: 50px;
     }
     #article{
