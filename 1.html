@@ -4,20 +4,40 @@
         <title>WEB-HTML</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <script>
+            function setColor(color){
+                var i = 0;
+                var alist = document.querySelectorAll('a');
+                while (i < alist.length){
+                        alist[i].style.color = color;
+                        i += 1;
+                }
+            }
+            function backgroundSetColor(color){
+                document.querySelector('body').style.backgroundColor = color;
+            }
+            function linksSetColor(color){
+                document.querySelector('body').style.color = color;
+            }
+            function nightdayhandler(self){
+                if (self.value === 'night'){
+                    backgroundSetColor('black');
+                    linksSetColor('white');
+                    self.value = 'day';
+                    setColor('powderblue');
+                } else {
+                    backgroundSetColor('white');
+                    linksSetColor('black');
+                    self.value = 'night';
+                    setColor('blue');
+                }
+            }
+        </script>
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
         <input type="button" value="night" onclick="
-            var target = document.querySelector('body')
-            if (this.value === 'night'){
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-                this.value = 'day'
-            } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-                this.value = 'night'
-            }
+        nightdayhandler(this); 
         ">
         <div id="article"></div>
             <ol>
